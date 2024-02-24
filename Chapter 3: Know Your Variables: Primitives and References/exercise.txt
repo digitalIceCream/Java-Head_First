@@ -1,0 +1,21 @@
+Based on what you know about the size and type of the primitive variables, see
+if you can figure out which of these are legal and which aren’t. We haven’t
+covered all the rules yet, so on some of these you’ll have to use your best
+judgment. Tip: The compiler always errs on the side of safety.
+
+1. int x = 34.5; // illegal -> no integer
+2. boolean boo = x; // illegal -> value must either be True of False
+3. int g = 17; // legal
+4. int y = g; // legal
+5. y = y + 10 // legal
+6. short s; // legal
+7. s = y; // illegal -> here y is an 32-bit int var, doesn't fit in 16-bit
+			short var
+8. byte b = 3; // legal
+9. byte v = b; // legal
+10. short n = 12; // legal
+11. v = n; // illegal -> here n is a 16-bit shor var, doesn't fit in 8-bit
+			 byte var
+12. byte k = 128; // illegal -> 8-bit signed integer at max 127
+
+
